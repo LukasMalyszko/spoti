@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spoti</title>
+  </head>
+
+  <body>
+    <div id="home-page">
+      <div class="playlist-component">
+        <div class="playlist-component__head">
+          <div class="playlist-component__nav">
+            <div class="playlist-component__arrows">
+              <div class="playlist-component__arrow left-arrow">
+                <img src="/public/images/arrow.svg" />
+              </div>
+              <div class="playlist-component__arrow right-arrow">
+                <img src="/public/images/arrow.svg" />
+              </div>
+            </div>
+            <a href="#"
+              ><div class="playlist-component__user">
+                <div class="playlist-component__user-img">
+                  <img src="/public/images/Julita-Gomez.png" />
+                </div>
+                <div class="playlist-component__user-name">Julita Gomez</div>
+                <div class="tooltip">Julita Gomez</div>
+              </div></a
+            >
+          </div>
+          <div class="playlist-component__head-img">
+            <img src="/public/images/playlist-image.png" />
+          </div>
+          <div class="playlist-component__playlist-description">
+            <div class="playlist-component__category-name">Playlist</div>
+            <div class="playlist-component__playlist-title">
+              Top songs of the world
+            </div>
+            <div class="playlist-component__playlist-subtitle">
+              Popular songs of Dua Lipa and many many others
+            </div>
+          </div>
+        </div>
+        <div class="playlist-component__songs-nav">
+          <div class="icon"><img src="/public/images/play.svg" /></div>
+          <div class="icon"><img src="/public/images/like.svg" /></div>
+          <div class="icon">
+            <img src="/public/images/dot.svg" />
+            <img src="/public/images/dot.svg" />
+            <img src="/public/images/dot.svg" />
+          </div>
+        </div>
+        <div class="playlist-component__songs">
+          <div class="playlist-component__songs-list">
+            <div data-play="true" class="playlist-component__song-element">
+              <div class="playlist-component__song-number">
+                <div class="number">01</div>
+                <img class="play-icon" src="/public/images/play-icon.svg">
+              </div>
+              <div class="playlist-component__song-img">
+                <img src="/public/images/Miley.png" />
+              </div>
+              <div class="playlist-component__song-description">
+                <div class="playlist-component__song-text-up">Flowers</div>
+                <div class="playlist-component__song-text-down">Flowers</div>
+              </div>
+              <div class="playlist-component__song-artists">
+                <div class="playlist-component__song-text-up">Artists</div>
+                <div class="playlist-component__song-text-down">
+                  Miley Cyrus
+                </div>
+              </div>
+              <div class="playlist-component__song-time">
+                <div class="playlist-component__song-text-up">Time</div>
+                <div class="playlist-component__song-text-down">3:20</div>
+              </div>
+              <div class="playlist-component__song-icons">
+                <div class="like"><img src="/public/images/like.svg" /></div>
+                <div class="dot">
+                  <img src="/public/images/dot.svg" />
+                  <img src="/public/images/dot.svg" />
+                  <img src="/public/images/dot.svg" />
+                </div>
+              </div>
+            </div>
+            <!--  first song -->
+            <div data-play="false" class="playlist-component__song-element">
+              <div class="playlist-component__song-number">02</div>
+              <div class="playlist-component__song-img">
+                <img src="/public/images/SZA-1.png" />
+              </div>
+              <div class="playlist-component__song-description">
+                <div class="playlist-component__song-text-up">Sos</div>
+                <div class="playlist-component__song-text-down">Kill Bill</div>
+              </div>
+              <div class="playlist-component__song-artists">
+                <div class="playlist-component__song-text-up">Artists</div>
+                <div class="playlist-component__song-text-down">Sza</div>
+              </div>
+              <div class="playlist-component__song-time">
+                <div class="playlist-component__song-text-up">Time</div>
+                <div class="playlist-component__song-text-down">2:32</div>
+              </div>
+              <div class="playlist-component__song-icons">
+                <div class="like"><img src="/public/images/like.svg" /></div>
+                <div class="dot">
+                  <img src="/public/images/dot.svg" />
+                  <img src="/public/images/dot.svg" />
+                  <img src="/public/images/dot.svg" />
+                </div>
+              </div>
+            </div>
+            <!-- second -->
+            <div data-play="false" class="playlist-component__song-element">
+              <div class="playlist-component__song-number">03</div>
+              <div class="playlist-component__song-img">
+                <img src="/public/images/maxresdefault .png" />
+              </div>
+              <div class="playlist-component__song-description">
+                <div class="playlist-component__song-text-up">
+                  Gemini Rights
+                </div>
+                <div class="playlist-component__song-text-down">Bad Habit</div>
+              </div>
+              <div class="playlist-component__song-artists">
+                <div class="playlist-component__song-text-up">Artists</div>
+                <div class="playlist-component__song-text-down">Steve Lacy</div>
+              </div>
+              <div class="playlist-component__song-time">
+                <div class="playlist-component__song-text-up">Time</div>
+                <div class="playlist-component__song-text-down">3:52</div>
+              </div>
+              <div class="playlist-component__song-icons">
+                <div class="like"><img src="/public/images/like.svg" /></div>
+                <div class="dot">
+                  <img src="/public/images/dot.svg" />
+                  <img src="/public/images/dot.svg" />
+                  <img src="/public/images/dot.svg" />
+                </div>
+              </div>
+            </div>
+            <!-- third -->
+            <div data-play="false" class="playlist-component__song-element">
+              <div class="playlist-component__song-number">04</div>
+              <div class="playlist-component__song-img">
+                <img src="/public/images/talk.png" />
+              </div>
+              <div class="playlist-component__song-description">
+                <div class="playlist-component__song-text-up">Talk To Me</div>
+                <div class="playlist-component__song-text-down">Talk To Me</div>
+              </div>
+              <div class="playlist-component__song-artists">
+                <div class="playlist-component__song-text-up">Artists</div>
+                <div class="playlist-component__song-text-down">
+                  Mark Menday, Seb Mont
+                </div>
+              </div>
+              <div class="playlist-component__song-time">
+                <div class="playlist-component__song-text-up">Time</div>
+                <div class="playlist-component__song-text-down">2:28</div>
+              </div>
+              <div class="playlist-component__song-icons">
+                <div class="like"><img src="/public/images/like.svg" /></div>
+                <div class="dot">
+                  <img src="/public/images/dot.svg" />
+                  <img src="/public/images/dot.svg" />
+                  <img src="/public/images/dot.svg" />
+                </div>
+              </div>
+            </div>
+            <!-- 4 -->
+            <div data-play="false" class="playlist-component__song-element">
+              <div class="playlist-component__song-number">05</div>
+              <div class="playlist-component__song-img">
+                <img src="/public/images/Sour.png" />
+              </div>
+              <div class="playlist-component__song-description">
+                <div class="playlist-component__song-text-up">Sour</div>
+                <div class="playlist-component__song-text-down">Good 4 u</div>
+              </div>
+              <div class="playlist-component__song-artists">
+                <div class="playlist-component__song-text-up">Artists</div>
+                <div class="playlist-component__song-text-down">
+                  Olivia Rodrigo
+                </div>
+              </div>
+              <div class="playlist-component__song-time">
+                <div class="playlist-component__song-text-up">Time</div>
+                <div class="playlist-component__song-text-down">2:58</div>
+              </div>
+              <div class="playlist-component__song-icons">
+                <div class="like"><img src="/public/images/like.svg" /></div>
+                <div class="dot">
+                  <img src="/public/images/dot.svg" />
+                  <img src="/public/images/dot.svg" />
+                  <img src="/public/images/dot.svg" />
+                </div>
+              </div>
+            </div>
+            <!-- 5 -->
+            <div data-play="false" class="playlist-component__song-element">
+              <div class="playlist-component__song-number">06</div>
+              <div class="playlist-component__song-img">
+                <img src="/public/images/Lil-Nas-X.png" />
+              </div>
+              <div class="playlist-component__song-description">
+                <div class="playlist-component__song-text-up">Singiel</div>
+                <div class="playlist-component__song-text-down">
+                  INDUSTRY BABY
+                </div>
+              </div>
+              <div class="playlist-component__song-artists">
+                <div class="playlist-component__song-text-up">Artists</div>
+                <div class="playlist-component__song-text-down">Lil Nas X</div>
+              </div>
+              <div class="playlist-component__song-time">
+                <div class="playlist-component__song-text-up">Time</div>
+                <div class="playlist-component__song-text-down">3:32</div>
+              </div>
+              <div class="playlist-component__song-icons">
+                <div class="like"><img src="/public/images/like.svg" /></div>
+                <div class="dot">
+                  <img src="/public/images/dot.svg" />
+                  <img src="/public/images/dot.svg" />
+                  <img src="/public/images/dot.svg" />
+                </div>
+              </div>
+            </div>
+            <!-- 6 -->
+            <div data-play="false" class="playlist-component__song-element">
+              <div class="playlist-component__song-number">07</div>
+              <div class="playlist-component__song-img">
+                <img src="/public/images/fineline.png" />
+              </div>
+              <div class="playlist-component__song-description">
+                <div class="playlist-component__song-text-up">Fine Line</div>
+                <div class="playlist-component__song-text-down">
+                  Watermelon Sugar
+                </div>
+              </div>
+              <div class="playlist-component__song-artists">
+                <div class="playlist-component__song-text-up">Artists</div>
+                <div class="playlist-component__song-text-down">
+                  Harry Styles
+                </div>
+              </div>
+              <div class="playlist-component__song-time">
+                <div class="playlist-component__song-text-up">Time</div>
+                <div class="playlist-component__song-text-down">2:54</div>
+              </div>
+              <div class="playlist-component__song-icons">
+                <div class="like"><img src="/public/images/like.svg" /></div>
+                <div class="dot">
+                  <img src="/public/images/dot.svg" />
+                  <img src="/public/images/dot.svg" />
+                  <img src="/public/images/dot.svg" />
+                </div>
+              </div>
+            </div>
+            <!-- 7 -->
+            <div data-play="false" class="playlist-component__song-element">
+              <div class="playlist-component__song-number">08</div>
+              <div class="playlist-component__song-img">
+                <img src="/public/images/always.png" />
+              </div>
+              <div class="playlist-component__song-description">
+                <div class="playlist-component__song-text-up">Fine Line</div>
+                <div class="playlist-component__song-text-down">
+                  Watermelon Sugar
+                </div>
+              </div>
+              <div class="playlist-component__song-artists">
+                <div class="playlist-component__song-text-up">Artists</div>
+                <div class="playlist-component__song-text-down">
+                  Isak Daniels
+                </div>
+              </div>
+              <div class="playlist-component__song-time">
+                <div class="playlist-component__song-text-up">Time</div>
+                <div class="playlist-component__song-text-down">3:33</div>
+              </div>
+              <div class="playlist-component__song-icons">
+                <div class="like"><img src="/public/images/like.svg" /></div>
+                <div class="dot">
+                  <img src="/public/images/dot.svg" />
+                  <img src="/public/images/dot.svg" />
+                  <img src="/public/images/dot.svg" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="playlist-component__menu">
+          <div class="playlist-component__menu-icon">
+            <img
+              class="playlist-component__menu-img"
+              data-active="1"
+              src="/public/images/home.svg"
+            />
+            <img
+              class="playlist-component__menu-img"
+              data-active="0"
+              src="/public/images/Home_Page-wh.svg"
+            />
+            <div class="playlist-component__menu-text">Home</div>
+          </div>
+          <div class="playlist-component__menu-icon">
+            <img
+              class="playlist-component__menu-img"
+              src="/public/images/Search.svg"
+            />
+            <div class="playlist-component__menu-text">Search</div>
+          </div>
+          <div class="playlist-component__menu-icon">
+            <img
+              class="playlist-component__menu-img"
+              src="/public/images/library.svg"
+            />
+            <div class="playlist-component__menu-text">Library</div>
+          </div>
+          <div class="playlist-component__menu-icon">
+            <img
+              class="playlist-component__menu-img"
+              src="/public/images/like.svg"
+            />
+            <div class="playlist-component__menu-text">Liked songs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/global-scripts/main.js"></script>
+    <script
+      type="module"
+      src="/src/pages/home-page/scripts/home-page.js"
+    ></script>
+  </body>
+</html>

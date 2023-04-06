@@ -1,0 +1,178 @@
+@import "/src/pages/home-page/styles/menu.scss";
+@import "/src/pages/home-page/styles/songs.scss";
+
+body {
+  background-color: var(--dark-shade-gray);
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.playlist-component {
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+  max-width: 1440px;
+
+  & &__nav {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute; //w brefie sticky, jednak wtedy nie wchodzi w obraz
+    padding: 25px 50px 17px;
+    max-width: 1440px;
+    width: 100%;
+    background-color: var(--opacity-dark-50);
+  }
+
+  & &__arrows {
+    display: flex;
+    gap: 24px;
+  }
+
+  & &__arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    margin-top: -5px;
+    border-radius: 23px;
+    background-color: var(--opacity-dark-50);
+
+    &.right-arrow {
+      transform: rotate(180deg);
+    }
+  }
+
+  & &__arrow:hover {
+    cursor: not-allowed;
+  }
+
+  & &__user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    background-color: var(--opacity-dark-70);
+    max-height: 44px;
+
+    .tooltip {
+      display: none;
+      position: absolute;
+      background-color: var(--opacity-dark-70);
+      color: var(--white-color);
+      padding: 10px 16px 10px 16px;
+      border-radius: 8px;
+      margin: 80px 40px 0;
+      line-height: 19px;
+    }
+  }
+  & &__user:hover .tooltip {
+    display: block;
+  }
+
+  & &__user-img {
+    img {
+      max-width: 38px;
+      padding: 5px 0px 2px 3px;
+      border-radius: 20px;
+    }
+  }
+  & &__head-img {
+    img {
+      max-width: 100%;
+      height: 434px;
+      object-fit: cover;
+      //object-position: center center;
+    }
+  }
+
+  & &__user-name {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    color: var(--white-color);
+    padding-right: 32px;
+  }
+
+  & &__playlist-description {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-left: 50px;
+    margin-top: -280px;
+    padding-bottom: 50px;
+  }
+
+  & &__category-name {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.04em;
+  }
+
+  & &__playlist-title {
+    max-width: 338px;
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 68px;
+    letter-spacing: -0.04em;
+  }
+
+  & &__playlist-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.04em;
+  }
+  @media (max-width: 1180) {
+  }
+
+  @media (max-width: 970px) {
+    .right-arrow {
+      display: none;
+    }
+    & &__user {
+      display: none;
+    }
+
+    & &__playlist-description {
+      margin-top: -200px;
+      padding-left: 32px;
+      padding-bottom: 30px;
+      gap: 16px;
+    }
+
+    & &__category-name {
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    & &__playlist-title {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 48px;
+    }
+
+    & &__playlist-subtitle {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+    }
+
+    .like {
+      display: none;
+    }
+  }
+
+  @media (max-width: 342px) {
+    & &__playlist-description {
+        padding-bottom: 11px;
+    }
+  }
+}
