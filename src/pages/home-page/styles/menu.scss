@@ -5,52 +5,47 @@
     justify-content: space-around;
     align-items: center;
     padding: 20px 150px;
-}
-& &__menu-icon {
+  }
+  & &__menu-icon {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+  }
 
-& &__menu-icon:hover {
+  & &__menu-icon:hover {
     cursor: pointer;
-    // .playlist-component__menu-img {
-        //     filter: invert(1);
-        // }
-        .playlist-component__menu-text {
-            font-size: 12px;
+
+    .playlist-component__menu-text {
+      font-size: 12px;
       font-weight: 700;
       line-height: 14px;
+    }
+
+    .playlist-component__menu-img {
+      path {
+        // background-color: white;
+        fill: var(--white-color);
+      }
     }
   }
 
   & &__menu-img {
-      max-width: 20px;
-      align-self: center;
-    }
-    
-    & &__menu-img {
-        
-        &[data-active="0"] {
-            display: none;
-        }
-        
-        &[data-active="1"] {
-            display: block;
-        }
-    }
-    
-    & &__menu-text {
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 14px;
-        transition: .7s;
+    max-width: 20px;
+    align-self: center;
+  }
+  
+ 
+
+  & &__menu-text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    transition: 0.2s;
   }
 
-  @media (max-width:645px){
-     
+  @media (max-width: 645px) {
     & &__menu {
-        display: none;
+      display: none;
     }
   }
 }

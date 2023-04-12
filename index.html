@@ -10,26 +10,26 @@
   <body>
     <div id="home-page">
       <div class="playlist-component">
-        <div class="playlist-component__head">
-          <div class="playlist-component__nav">
-            <div class="playlist-component__arrows">
-              <div class="playlist-component__arrow left-arrow">
-                <img src="/public/images/arrow.svg" />
-              </div>
-              <div class="playlist-component__arrow right-arrow">
-                <img src="/public/images/arrow.svg" />
-              </div>
+        <div class="playlist-component__nav">
+          <div class="playlist-component__arrows">
+            <div class="playlist-component__arrow left-arrow">
+              <img src="/public/images/arrow.svg" />
             </div>
-            <a href="#"
-              ><div class="playlist-component__user">
-                <div class="playlist-component__user-img">
-                  <img src="/public/images/Julita-Gomez.png" />
-                </div>
-                <div class="playlist-component__user-name">Julita Gomez</div>
-                <div class="tooltip">Julita Gomez</div>
-              </div></a
-            >
+            <div class="playlist-component__arrow right-arrow">
+              <img src="/public/images/arrow.svg" />
+            </div>
           </div>
+          <a href="#"
+            ><div class="playlist-component__user">
+              <div class="playlist-component__user-img">
+                <img src="/public/images/Julita-Gomez.png" />
+              </div>
+              <div class="playlist-component__user-name">Julita Gomez</div>
+              <div class="tooltip">Julita Gomez</div>
+            </div></a
+          >
+        </div>
+        <div class="playlist-component__head">
           <div class="playlist-component__head-img">
             <img src="/public/images/playlist-image.png" />
           </div>
@@ -46,18 +46,16 @@
         <div class="playlist-component__songs-nav">
           <div class="icon"><img src="/public/images/play.svg" /></div>
           <div class="icon"><img src="/public/images/like.svg" /></div>
-          <div class="icon">
-            <img src="/public/images/dot.svg" />
-            <img src="/public/images/dot.svg" />
-            <img src="/public/images/dot.svg" />
+          <div class="icon-container">
+            <img src="/public/images/dots.svg" />
           </div>
         </div>
         <div class="playlist-component__songs">
           <div class="playlist-component__songs-list">
-            <div data-play="true" class="playlist-component__song-element">
+            <div data-play="false" class="playlist-component__song-element">
               <div class="playlist-component__song-number">
                 <div class="number">01</div>
-                <img class="play-icon" src="/public/images/play-icon.svg">
+                <img class="play-icon" src="/public/images/play-icon.svg" />
               </div>
               <div class="playlist-component__song-img">
                 <img src="/public/images/Miley.png" />
@@ -77,17 +75,20 @@
                 <div class="playlist-component__song-text-down">3:20</div>
               </div>
               <div class="playlist-component__song-icons">
-                <div class="like"><img src="/public/images/like.svg" /></div>
-                <div class="dot">
-                  <img src="/public/images/dot.svg" />
-                  <img src="/public/images/dot.svg" />
-                  <img src="/public/images/dot.svg" />
+                <div class="like icon-container">
+                  <img src="/public/images/like.svg" />
+                </div>
+                <div class="dots icon-container">
+                  <img src="/public/images/dots.svg" />
                 </div>
               </div>
             </div>
             <!--  first song -->
             <div data-play="false" class="playlist-component__song-element">
-              <div class="playlist-component__song-number">02</div>
+              <div class="playlist-component__song-number">
+                <div class="number">02</div>
+                <img class="play-icon" src="/public/images/play-icon.svg" />
+              </div>
               <div class="playlist-component__song-img">
                 <img src="/public/images/SZA-1.png" />
               </div>
@@ -104,17 +105,18 @@
                 <div class="playlist-component__song-text-down">2:32</div>
               </div>
               <div class="playlist-component__song-icons">
-                <div class="like"><img src="/public/images/like.svg" /></div>
-                <div class="dot">
-                  <img src="/public/images/dot.svg" />
-                  <img src="/public/images/dot.svg" />
-                  <img src="/public/images/dot.svg" />
+                <div class="like icon-container"><img src="/public/images/like.svg" /></div>
+                <div class="dots icon-container">
+                  <img src="/public/images/dots.svg" />
                 </div>
               </div>
             </div>
             <!-- second -->
             <div data-play="false" class="playlist-component__song-element">
-              <div class="playlist-component__song-number">03</div>
+              <div class="playlist-component__song-number">
+                <div class="number">03</div>
+                <img class="play-icon" src="/public/images/play-icon.svg" />
+              </div>
               <div class="playlist-component__song-img">
                 <img src="/public/images/maxresdefault .png" />
               </div>
@@ -133,17 +135,18 @@
                 <div class="playlist-component__song-text-down">3:52</div>
               </div>
               <div class="playlist-component__song-icons">
-                <div class="like"><img src="/public/images/like.svg" /></div>
-                <div class="dot">
-                  <img src="/public/images/dot.svg" />
-                  <img src="/public/images/dot.svg" />
-                  <img src="/public/images/dot.svg" />
+                <div class="like icon-container"><img src="/public/images/like.svg" /></div>
+                <div class="dots icon-container">
+                  <img src="/public/images/dots.svg" />
                 </div>
               </div>
             </div>
             <!-- third -->
             <div data-play="false" class="playlist-component__song-element">
-              <div class="playlist-component__song-number">04</div>
+              <div class="playlist-component__song-number">
+                <div class="number">04</div>
+                <img class="play-icon" src="/public/images/play-icon.svg" />
+              </div>
               <div class="playlist-component__song-img">
                 <img src="/public/images/talk.png" />
               </div>
@@ -162,17 +165,18 @@
                 <div class="playlist-component__song-text-down">2:28</div>
               </div>
               <div class="playlist-component__song-icons">
-                <div class="like"><img src="/public/images/like.svg" /></div>
-                <div class="dot">
-                  <img src="/public/images/dot.svg" />
-                  <img src="/public/images/dot.svg" />
-                  <img src="/public/images/dot.svg" />
+                <div class="like icon-container"><img src="/public/images/like.svg" /></div>
+                <div class="dots icon-container">
+                  <img src="/public/images/dots.svg" />
                 </div>
               </div>
             </div>
             <!-- 4 -->
             <div data-play="false" class="playlist-component__song-element">
-              <div class="playlist-component__song-number">05</div>
+              <div class="playlist-component__song-number">
+                <div class="number">05</div>
+                <img class="play-icon" src="/public/images/play-icon.svg" />
+              </div>
               <div class="playlist-component__song-img">
                 <img src="/public/images/Sour.png" />
               </div>
@@ -191,17 +195,18 @@
                 <div class="playlist-component__song-text-down">2:58</div>
               </div>
               <div class="playlist-component__song-icons">
-                <div class="like"><img src="/public/images/like.svg" /></div>
-                <div class="dot">
-                  <img src="/public/images/dot.svg" />
-                  <img src="/public/images/dot.svg" />
-                  <img src="/public/images/dot.svg" />
+                <div class="like icon-container"><img src="/public/images/like.svg" /></div>
+                <div class="dots icon-container">
+                  <img src="/public/images/dots.svg" />
                 </div>
               </div>
             </div>
             <!-- 5 -->
             <div data-play="false" class="playlist-component__song-element">
-              <div class="playlist-component__song-number">06</div>
+              <div class="playlist-component__song-number">
+                <div class="number">06</div>
+                <img class="play-icon" src="/public/images/play-icon.svg" />
+              </div>
               <div class="playlist-component__song-img">
                 <img src="/public/images/Lil-Nas-X.png" />
               </div>
@@ -220,17 +225,18 @@
                 <div class="playlist-component__song-text-down">3:32</div>
               </div>
               <div class="playlist-component__song-icons">
-                <div class="like"><img src="/public/images/like.svg" /></div>
-                <div class="dot">
-                  <img src="/public/images/dot.svg" />
-                  <img src="/public/images/dot.svg" />
-                  <img src="/public/images/dot.svg" />
+                <div class="like icon-container"><img src="/public/images/like.svg" /></div>
+                <div class="dots icon-container">
+                  <img src="/public/images/dots.svg" />
                 </div>
               </div>
             </div>
             <!-- 6 -->
             <div data-play="false" class="playlist-component__song-element">
-              <div class="playlist-component__song-number">07</div>
+              <div class="playlist-component__song-number">
+                <div class="number">07</div>
+                <img class="play-icon" src="/public/images/play-icon.svg" />
+              </div>
               <div class="playlist-component__song-img">
                 <img src="/public/images/fineline.png" />
               </div>
@@ -251,25 +257,24 @@
                 <div class="playlist-component__song-text-down">2:54</div>
               </div>
               <div class="playlist-component__song-icons">
-                <div class="like"><img src="/public/images/like.svg" /></div>
-                <div class="dot">
-                  <img src="/public/images/dot.svg" />
-                  <img src="/public/images/dot.svg" />
-                  <img src="/public/images/dot.svg" />
+                <div class="like icon-container"><img src="/public/images/like.svg" /></div>
+                <div class="dots icon-container">
+                  <img src="/public/images/dots.svg" />
                 </div>
               </div>
             </div>
             <!-- 7 -->
             <div data-play="false" class="playlist-component__song-element">
-              <div class="playlist-component__song-number">08</div>
+              <div class="playlist-component__song-number">
+                <div class="number">08</div>
+                <img class="play-icon" src="/public/images/play-icon.svg" />
+              </div>
               <div class="playlist-component__song-img">
                 <img src="/public/images/always.png" />
               </div>
               <div class="playlist-component__song-description">
                 <div class="playlist-component__song-text-up">Fine Line</div>
-                <div class="playlist-component__song-text-down">
-                  Watermelon Sugar
-                </div>
+                <div class="playlist-component__song-text-down">Always</div>
               </div>
               <div class="playlist-component__song-artists">
                 <div class="playlist-component__song-text-up">Artists</div>
@@ -282,11 +287,9 @@
                 <div class="playlist-component__song-text-down">3:33</div>
               </div>
               <div class="playlist-component__song-icons">
-                <div class="like"><img src="/public/images/like.svg" /></div>
-                <div class="dot">
-                  <img src="/public/images/dot.svg" />
-                  <img src="/public/images/dot.svg" />
-                  <img src="/public/images/dot.svg" />
+                <div class="like icon-container"><img src="/public/images/like.svg" /></div>
+                <div class="dots icon-container">
+                  <img src="/public/images/dots.svg" />
                 </div>
               </div>
             </div>
@@ -294,37 +297,95 @@
         </div>
         <div class="playlist-component__menu">
           <div class="playlist-component__menu-icon">
-            <img
+            <svg
               class="playlist-component__menu-img"
-              data-active="1"
-              src="/public/images/home.svg"
-            />
-            <img
-              class="playlist-component__menu-img"
-              data-active="0"
-              src="/public/images/Home_Page-wh.svg"
-            />
+              width="17"
+              height="17"
+              viewBox="0 0 17 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="playlist-component__menu-img"
+                d="M14.5913 16.4923H10.0635C9.63237 16.4923 9.28288 16.1428 9.28288 15.7116V12.5891C9.28288 12.1586 8.93268 11.8084 8.50223 11.8084C8.07179 11.8084 7.72159 12.1586 7.72159 12.5891V15.7116C7.72159 16.1428 7.3721 16.4923 6.94095 16.4923H2.41322C1.12188 16.4923 0.0712891 15.4417 0.0712891 14.1503V7.14825C0.0712891 6.38884 0.441236 5.6744 1.06111 5.23607L7.14774 0.842295C7.15024 0.840461 7.15278 0.838665 7.15535 0.83687C7.95781 0.272074 9.03717 0.2654 9.84912 0.83687C9.85165 0.838665 9.85419 0.840461 9.85673 0.842295L15.9434 5.23611C16.5633 5.67444 16.9332 6.38888 16.9332 7.14829V14.1504C16.9332 15.4417 15.8826 16.4923 14.5913 16.4923ZM10.8442 14.931H14.5913C15.0217 14.931 15.3719 14.5808 15.3719 14.1503V7.14825C15.3719 6.89454 15.248 6.6559 15.0405 6.50988C15.038 6.50809 15.0355 6.50629 15.0329 6.50446L8.9474 2.11146C8.68194 1.92653 8.32464 1.92509 8.05707 2.11146L1.97153 6.50446C1.96903 6.50625 1.9665 6.50809 1.96392 6.50988C1.75646 6.6559 1.63258 6.89454 1.63258 7.14825V14.1503C1.63258 14.5808 1.98277 14.931 2.41322 14.931H6.16031V12.5891C6.16031 11.2977 7.21089 10.2471 8.50223 10.2471C9.79357 10.2471 10.8442 11.2977 10.8442 12.5891V14.931Z"
+                fill="#BFBFBF"
+              />
+            </svg>
             <div class="playlist-component__menu-text">Home</div>
           </div>
           <div class="playlist-component__menu-icon">
-            <img
+            <svg
               class="playlist-component__menu-img"
-              src="/public/images/Search.svg"
-            />
+              width="21"
+              height="21"
+              viewBox="0 0 21 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="playlist-component__menu-img"
+                d="M10.5001 20.4902C1.62359 20.4813 -2.84124 9.7014 3.42906 3.41918C7.15128 -0.459754 13.8489 -0.460379 17.5711 3.41934C23.8414 9.7021 19.376 20.4818 10.5001 20.4902ZM10.5001 2.05278C5.84761 2.05278 2.06257 5.83781 2.06257 10.4903C2.52605 21.6837 18.4757 21.6805 18.9375 10.4902C18.9375 5.83785 15.1525 2.05278 10.5001 2.05278ZM10.5001 11.2715C10.9315 11.2715 11.2813 10.9217 11.2813 10.4903C11.2402 9.45394 9.75979 9.45425 9.71881 10.4903C9.71881 10.9217 10.0686 11.2715 10.5001 11.2715ZM6.08608 15.6856C5.88202 15.6856 5.68237 15.6056 5.53354 15.4568C5.3264 15.2496 5.25257 14.944 5.34226 14.6651L7.49069 7.98546C7.56776 7.74582 7.75557 7.558 7.99522 7.48093L14.6749 5.3325C14.9537 5.24281 15.2593 5.31668 15.4665 5.52379C15.6737 5.73094 15.7475 6.03652 15.6578 6.31543L13.5094 12.9951C13.5038 13.0123 13.4977 13.0293 13.491 13.046C13.3546 13.3871 13.0678 13.4794 12.93 13.5237L6.32518 15.6481C6.24667 15.6733 6.16604 15.6856 6.08608 15.6856ZM8.85537 8.84558L7.29577 13.6946C8.85291 13.1938 11.2275 12.4301 12.1447 12.135L13.7043 7.28597L8.85537 8.84558Z"
+                fill="#BFBFBF"
+              />
+            </svg>
+
             <div class="playlist-component__menu-text">Search</div>
           </div>
           <div class="playlist-component__menu-icon">
-            <img
+            <svg
               class="playlist-component__menu-img"
-              src="/public/images/library.svg"
-            />
+              width="21"
+              height="19"
+              viewBox="0 0 21 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="playlist-component__menu-img"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M17.9357 6.14591C17.9357 4.69021 16.756 3.5105 15.3003 3.5105C12.1656 3.5105 5.97667 3.5105 2.84196 3.5105C1.38625 3.5105 0.206543 4.69021 0.206543 6.14591V15.7292C0.206543 17.185 1.38625 18.3647 2.84196 18.3647H15.3003C16.756 18.3647 17.9357 17.185 17.9357 15.7292V6.14591ZM16.4982 6.14591V15.7292C16.4982 16.3905 15.9615 16.9272 15.3003 16.9272C12.1656 16.9272 5.97667 16.9272 2.84196 16.9272C2.18071 16.9272 1.64404 16.3905 1.64404 15.7292V6.14591C1.64404 5.48466 2.18071 4.948 2.84196 4.948H15.3003C15.9615 4.948 16.4982 5.48466 16.4982 6.14591Z"
+                fill="#BFBFBF"
+              />
+              <path
+                class="playlist-component__menu-img"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3.76292 4.94704L3.80029 4.948L3.83096 4.94416C3.96896 4.92404 4.51904 4.80712 4.51904 4.21679V3.27091C4.51904 2.95275 4.64554 2.64896 4.86979 2.42375C5.095 2.1995 5.39879 2.073 5.71696 2.073H18.1753C18.8365 2.073 19.3732 2.60966 19.3732 3.27091V12.8542C19.3732 13.1724 19.2467 13.4762 19.0225 13.7014C18.7973 13.9257 18.4935 14.0522 18.1753 14.0522H17.217C16.8202 14.0522 16.4982 14.3742 16.4982 14.7709C16.4982 15.1677 16.8202 15.4897 17.217 15.4897H18.1753C18.8739 15.4897 19.5448 15.2117 20.0393 14.7182C20.5328 14.2237 20.8107 13.5529 20.8107 12.8542V3.27091C20.8107 1.81521 19.631 0.635498 18.1753 0.635498C15.0406 0.635498 8.85167 0.635498 5.71696 0.635498C5.01833 0.635498 4.3475 0.913415 3.853 1.40696C3.35946 1.90146 3.08154 2.57229 3.08154 3.27091V4.21679V4.22925C3.08154 4.61354 3.38342 4.92787 3.76292 4.94704Z"
+                fill="#BFBFBF"
+              />
+              <path
+                class="playlist-component__menu-img"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.63786 10.698C6.18311 10.698 5.00244 11.8787 5.00244 13.3334C5.00244 14.7882 6.18311 15.9688 7.63786 15.9688C9.09261 15.9688 10.2733 14.7882 10.2733 13.3334C10.2733 11.8787 9.09261 10.698 7.63786 10.698ZM7.63786 12.1355C8.29911 12.1355 8.83577 12.6722 8.83577 13.3334C8.83577 13.9947 8.29911 14.5313 7.63786 14.5313C6.97661 14.5313 6.43994 13.9947 6.43994 13.3334C6.43994 12.6722 6.97661 12.1355 7.63786 12.1355Z"
+                fill="#BFBFBF"
+              />
+              <path
+                class="playlist-component__menu-img"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.269 13.3334V7.96764L12.0266 9.13968C12.3563 9.3601 12.8029 9.27002 13.0233 8.94035C13.2437 8.61069 13.1536 8.1641 12.824 7.94369L9.94896 6.02702C9.72854 5.88039 9.44488 5.86602 9.21104 5.99156C8.97721 6.11614 8.83154 6.35956 8.83154 6.62502V13.3334C8.83154 13.7301 9.15354 14.0521 9.55029 14.0521C9.94704 14.0521 10.269 13.7301 10.269 13.3334Z"
+                fill="#BFBFBF"
+              />
+            </svg>
             <div class="playlist-component__menu-text">Library</div>
           </div>
           <div class="playlist-component__menu-icon">
-            <img
+            <svg
               class="playlist-component__menu-img"
-              src="/public/images/like.svg"
-            />
+              width="32"
+              height="29"
+              viewBox="0 0 32 29"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="playlist-component__menu-img"
+                d="M23.375 0.950195C20.7131 0.950195 18.3796 2.13713 16.6268 4.38276C16.3931 4.68226 16.1847 4.98188 16 5.27207C15.8153 4.98182 15.6069 4.68226 15.3732 4.38276C13.6204 2.13713 11.2869 0.950195 8.625 0.950195C3.5965 0.950195 0 5.16063 0 10.2129C0 15.99 4.73481 21.4346 15.3523 27.8667C15.5514 27.9873 15.7757 28.0476 16 28.0476C16.2243 28.0476 16.4486 27.9873 16.6477 27.8668C27.2652 21.4347 32 15.9901 32 10.213C32 5.16332 28.4064 0.950195 23.375 0.950195ZM26.1973 17.4064C23.9869 19.8728 20.6466 22.4698 16 25.3328C11.3534 22.4698 8.01313 19.8728 5.80269 17.4064C3.58031 14.9267 2.5 12.5737 2.5 10.213C2.5 6.57526 4.95837 3.4502 8.625 3.4502C10.4923 3.4502 12.0844 4.26207 13.3572 5.86332C14.3749 7.14388 14.8038 8.4662 14.8068 8.47563C14.9696 8.99782 15.4531 9.35351 16.0001 9.35351C16.5471 9.35351 17.0306 8.99788 17.1934 8.47563C17.1973 8.46301 17.6133 7.18195 18.5976 5.92095C19.8773 4.28145 21.4846 3.45013 23.375 3.45013C27.0455 3.45013 29.5 6.5782 29.5 10.2129C29.5 12.5736 28.4197 14.9266 26.1973 17.4064Z"
+                fill="#BFBFBF"
+              />
+            </svg>
             <div class="playlist-component__menu-text">Liked songs</div>
           </div>
         </div>
