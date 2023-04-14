@@ -19,7 +19,7 @@ function createArrow(text) {
   const div = createElementWithClassAndText("div", "list-arrow", "");
   const img = document.createElement("img");
   img.classList.add("arrow");
-  img.src = "/public/images/arrow.svg";
+  img.src = "/images/arrow.svg";
   div.innerText = text;
   div.appendChild(img);
   return div;
