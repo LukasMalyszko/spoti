@@ -1,5 +1,6 @@
 @import "/src/pages/home-page/styles/menu.scss";
 @import "/src/pages/home-page/styles/songs.scss";
+@import "/src/pages/home-page/styles/showing-list.scss";
 
 body {
   background-color: var(--dark-shade-gray);
@@ -23,17 +24,17 @@ a {
     align-items: center;
 
     img {
-
       height: 52px;
     }
   }
-  
+
   & &__nav {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
+    top: 0;
     padding: 25px 50px 17px;
     max-width: 1440px;
     width: 100%;
@@ -143,6 +144,9 @@ a {
   }
 
   @media (max-width: 970px) {
+    & &__nav {
+      padding-left: 16px;
+    }
     .right-arrow {
       display: none;
     }
@@ -152,7 +156,8 @@ a {
 
     & &__head-img {
       img {
-        object-position: -500px;
+        object-position: -380px;
+        height: 428px;
       }
     }
 
@@ -170,13 +175,12 @@ a {
 
     & &__playlist-title {
       font-size: 48px;
-      font-weight: 700;
       line-height: 48px;
+      max-width: 238px;
     }
 
     & &__playlist-subtitle {
       font-size: 16px;
-      font-weight: 400;
       line-height: 19px;
     }
 
@@ -192,6 +196,7 @@ a {
 
     & &__head-img {
       img {
+        height: 435px;
         object-position: -850px;
       }
     }

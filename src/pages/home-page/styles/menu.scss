@@ -4,43 +4,48 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 20px 150px;
+    padding: 20px 200px;
   }
   & &__menu-icon {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    width: 62px;
+    opacity: .5;
+    transition: .2s;
   }
 
   & &__menu-icon:hover {
     cursor: pointer;
+    opacity: .7;
+  }
+    
+
+  & &__menu-icon:active {
+    opacity: 1;
 
     .playlist-component__menu-text {
       font-size: 12px;
       font-weight: 700;
       line-height: 14px;
     }
-
-    .playlist-component__menu-img {
-      path {
-        // background-color: white;
-        fill: var(--white-color);
-      }
-    }
   }
 
   & &__menu-img {
     max-width: 20px;
-    align-self: center;
   }
   
- 
-
   & &__menu-text {
     font-size: 12px;
     font-weight: 400;
     line-height: 14px;
     transition: 0.2s;
+  }
+
+  @media (max-width: 850px) {
+    & &__menu {
+      padding: 20px 100px;
+    }
   }
 
   @media (max-width: 645px) {
