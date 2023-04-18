@@ -46,6 +46,7 @@ const showList = () => {
     list.innerHTML = showingList;
   }
 
+  
   const dropdown = document.querySelector(".playlist-component__showing-list");
   let windowHeightBelowElement = 0;
 
