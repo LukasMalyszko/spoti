@@ -1,79 +1,93 @@
 import "../styles/home-page.scss";
 
+const showingList = `
+<ul class="playlist-component__showing-list">
+    <li class="playlist-component__showing-list-el">
+        Add to queue
+    </li>
+    <div class="line"></div>
+    <li class="playlist-component__showing-list-el">
+        Go to the track
+    </li>
+    <li class="playlist-component__showing-list-el">
+        Go to the artist
+    </li>
+    <li class="playlist-component__showing-list-el">
+        Go to the album
+    </li>
+    <div class="line"></div>
+    <li class="playlist-component__showing-list-el">
+        Show content authors
+    </li>
+    <li class="playlist-component__showing-list-el">
+        Add to playlist
+    </li>
+    <li class="playlist-component__showing-list-el">
+    <div class="list-arrow">
+        Show content authors<img
+        class="arrow"
+        src="/images/arrow.svg"
+        />
+    </div>
+    </li>
+    <div class="line"></div>
+    <li class="playlist-component__showing-list-el">
+    <div class="list-arrow">
+        Share<img class="arrow" src="/images/arrow.svg" />
+    </div>
+    </li>
+</ul>`;
+
+const listContainer = document.querySelectorAll(".list-container");
 const dots = document.querySelectorAll(".dots");
-const songIcons = document.querySelector(".playlist-component__song-icons");
 
-function createElementWithClassAndText(tag, className, text) {
-  const element = document.createElement(tag);
-  element.classList.add(className);
-  element.textContent = text;
-  return element;
-}
+const showList = () => {
+  for (const list of listContainer) {
+    list.innerHTML = showingList;
+  }
 
-function createListItem(className, text) {
-  const li = createElementWithClassAndText("li", className, text);
-  return li;
-}
+  const dropdown = document.querySelector(".playlist-component__showing-list");
+  let windowHeightBelowElement = 0;
 
-function createArrow(text) {
-  const div = createElementWithClassAndText("div", "list-arrow", "");
-  const img = document.createElement("img");
-  img.classList.add("arrow");
-  img.src = "/images/arrow.svg";
-  div.innerText = text;
-  div.appendChild(img);
-  return div;
-}
+  const calculateWindowHeight = (element) => {
+    const rect = element.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
 
-function showList() {
-  const ul = document.createElement("ul");
-  ul.classList.add("playlist-component__showing-list");
+    const elementBottom = rect.bottom;
+     windowHeightBelowElement = windowHeight - elementBottom;
 
-  const listGroup = createElementWithClassAndText("div", "list-group");
-
-  const { li1, li2, li3, li4, li5, li6, li7, li8 } = {
-    li1: createListItem("playlist-component__showing-list-el", "Add to queue"),
-    li2: createListItem(
-      "playlist-component__showing-list-el",
-      "Go to the track"
-    ),
-    li3: createListItem(
-      "playlist-component__showing-list-el",
-      "Go to the artist"
-    ),
-    li4: createListItem(
-      "playlist-component__showing-list-el",
-      "Go to the album"
-    ),
-    li5: createListItem(
-      "playlist-component__showing-list-el",
-      "Show content authors"
-    ),
-    li6: createListItem(
-      "playlist-component__showing-list-el",
-      "Add to playlist"
-    ),
-    li7: createListItem("playlist-component__showing-list-el", ""),
-    li8: createListItem("playlist-component__showing-list-el", ""),
+    return windowHeightBelowElement;
   };
+  calculateWindowHeight(dropdown);
 
-  li8.classList.add("share");
-
-  ul.appendChild(li1);
-  ul.appendChild(listGroup);
-  listGroup.appendChild(li2);
-  listGroup.appendChild(li3);
-  listGroup.appendChild(li4);
-  ul.appendChild(li5);
-  ul.appendChild(li6);
-  ul.appendChild(li7);
-  li7.appendChild(createArrow("Show content authors"));
-  ul.appendChild(li8);
-  li8.appendChild(createArrow("Share"));
-
-  songIcons.appendChild(ul);
-}
+  const checkHeight = () => {
+    if (dropdown.offsetHeight > windowHeightBelowElement) {
+      dropdown.classList.add("reverse");
+      console.log("checkHeight() called")
+    }
+  };
+  checkHeight();
+};
 
 for (const dot of dots) {
   dot.addEventListener("click", showList);
 }
+
+const hideList = (event) => {
+  if (event) {
+    const container = event.target
+      .closest(".dots-container")
+      .querySelector(".list-container");
+    container.innerHTML = "";
+  } else {
+    for (const list of listContainer) {
+      list.innerHTML = "";
+    }
+  }
+};
+
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".dots")) {
+    hideList();
+  }
+});

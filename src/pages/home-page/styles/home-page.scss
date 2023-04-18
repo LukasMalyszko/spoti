@@ -18,6 +18,10 @@ a {
   font-family: "Lato", sans-serif;
   box-sizing: border-box;
   max-width: 1440px;
+  
+  & &__wrapper {
+  overflow-y: scroll;
+  }
 
   .icon-container {
     display: flex;

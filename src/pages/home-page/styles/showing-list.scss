@@ -1,18 +1,34 @@
 .playlist-component {
+
+  
+  .dots-icon-wrapper {
+    position: relative;
+  }
+  
   & &__showing-list {
     position: absolute;
+    display: flex;
+    flex-direction: column;
     z-index: 1;
     margin-top: 25px;
     list-style: none;
-    max-width: 248px;
+    width: 248px;
+    right: 0;
     background-color: var(--dark-shade-gray-play);
     padding: 16px;
     border-radius: 8px;
     font-size: 14px;
     font-weight: 500;
     line-height: 17px;
-  }
+    top: 100%;
 
+  }
+  
+  .reverse {
+    top: unset;
+    bottom: 100%;
+  }
+  
   & &__showing-list-el {
     border-radius: 8px;
     padding: 16px;
@@ -23,15 +39,11 @@
     background-color: var(--gray-active);
   }
 
-  .list-group {
-    border-top: 1px solid var(--gray-active);
-    border-bottom: 1px solid var(--gray-active);
-    border-width: calc(100% - 8px);    
-  }
-  
-  .share {
-    border-top: 1px solid var(--gray-active);
-    border-width: calc(100% - 8px);    
+  .line {
+    height: 1px;
+    background-color: var(--gray-active);
+    width: calc(100% - 30px);
+    align-self: center;
   }
 
   .list-arrow {
