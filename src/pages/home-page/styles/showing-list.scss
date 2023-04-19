@@ -1,8 +1,12 @@
 .playlist-component {
 
-  
   .dots-icon-wrapper {
     position: relative;
+  }
+
+  .reverse {
+    top: unset;
+    bottom: 100%;
   }
   
   & &__showing-list {
@@ -12,7 +16,7 @@
     z-index: 1;
     margin-top: 25px;
     list-style: none;
-    width: 248px;
+    width: 15em;
     right: 0;
     background-color: var(--dark-shade-gray-play);
     padding: 16px;
@@ -20,13 +24,6 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 17px;
-    top: 100%;
-
-  }
-  
-  .reverse {
-    top: unset;
-    bottom: 100%;
   }
   
   & &__showing-list-el {
