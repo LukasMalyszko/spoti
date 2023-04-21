@@ -42,108 +42,83 @@ const dots = document.querySelectorAll(".dots");
 
 ///przechodzi przez pętle dots i rozwija listę do klikniętego dota
 ///
-for (const dot of dots) {
+dots.forEach((dot) => {
   dot.addEventListener("click", () => {
     showList(dot);
   });
-}
+});
 
 /// wyswietla listę po kliknięciu w dot
 ///
 ///
 function showList(element) {
   const songElement = element.closest(".playlist-component__song-element");
-  songElement.setAttribute("data-active", "1");
+  songElement.dataset.active = "1";
 
   const listContainer = element.parentElement.querySelector(".list-container");
   listContainer.innerHTML = showingList;
 
-  const allSongElements = document.querySelectorAll(
+  const allSongElements = songElement.parentElement.querySelectorAll(
     ".playlist-component__song-element"
   );
 
-  // ustawia data-active=0 pozostałym songElement
+  
+  /// ustawia data-active=0 pozostałym songElement
+  ///
   allSongElements.forEach((el) => {
     if (el !== songElement) {
-      el.setAttribute("data-active", "0");
+      el.dataset.active = "0";
     }
   });
 
+  // oblicza pozostałą wysokość strony
+  const windowHeight = window.innerHeight;
+  const elementBottom = songElement.getBoundingClientRect().bottom;
+  const windowHeightBelowElement = windowHeight - elementBottom;
   const dropdown = document.querySelector(".playlist-component__showing-list");
-  // console.log(dropdown);
-  
-  let windowHeightBelowElement = 0;
-  function calculateWindowHeight(element) {
-    //   console.log(element.offsetTop)
-    //   const rect = element.getBoundingClientRect();
 
-    const windowHeight = window.innerHeight;
-///wysokość rodzica songelement
-///
-    const elementBottom = element.closest(".playlist-component__song-element").offsetTop;
-    //   console.log(` windowHeight: ${windowHeight}, elementBottom: ${elementBottom}`)
-
-    ///oblicza pozostałą wysokość strony
-    ///
-
-    /// można dodać wysokość elementu head zamiast liczby
-    windowHeightBelowElement = windowHeight - elementBottom + 420;
-
-    return windowHeightBelowElement;
-  }
-  calculateWindowHeight(dropdown);
-
-  console.log(windowHeightBelowElement)
-
-  ///sprawdza czy lista ma większą wysokość niż pozostała wysokość strony
+  /// sprawdza czy lista ma większą wysokość niż pozostała wysokość strony
   ///
-//   console.log(dropdown.offsetHeight)
-  function checkHeight() {
-    if (dropdown.offsetHeight > windowHeightBelowElement) {
-      dropdown.classList.add("reverse");
-    }
+  if (dropdown.offsetHeight > windowHeightBelowElement) {
+    dropdown.classList.add("reverse");
   }
-  checkHeight();
-//   console.log(dropdown.offsetHeight);
 }
 
-/// ukrywa listę oraz przywraca domyślną wartość songElement
-///
+/// jeśli klikniętym el nie są ikony, zamyka listę
+/// 
 ///
 document.addEventListener("click", (event) => {
-  /// jeśli klikniętym el nie są ikony, zamyka listę
-  ///
-  if (!event.target.closest(".playlist-component__showing-list")) {
-    if (!event.target.closest(".playlist-component__song-icons")) {
+  if (!event.target.closest(".dots")) {
+    // if (!event.target.closest(".playlist-component__showing-list")) {
       hideList();
-    }
+    // }
   }
 });
 
 /// sprawdza czy obiekt event został zdefiniowany
-/// ukrywanie listy po klinkięciu poza elementem
+/// 
 ///
-
 function hideList(event) {
   if (event && event.target) {
     const songElement = event.target.closest(
       ".playlist-component__song-element"
     );
-    songElement.setAttribute("data-active", "0");
+    songElement.dataset.active = "0";
+
     const container = event.target
-      .closest(".dots-container")
+      .closest(".icon-container")
       .querySelector(".list-container");
     container.innerHTML = "";
   } else {
     const songElements = document.querySelectorAll(
       ".playlist-component__song-element"
     );
-    for (const songElement of songElements) {
-      songElement.setAttribute("data-active", "0");
+    songElements.forEach((songElement) => {
+      songElement.dataset.active = "0";
       const listContainers = songElement.querySelectorAll(".list-container");
-      for (const listContainer of listContainers) {
+      listContainers.forEach((listContainer) => {
         listContainer.innerHTML = "";
-      }
-    }
+      });
+    });
   }
 }

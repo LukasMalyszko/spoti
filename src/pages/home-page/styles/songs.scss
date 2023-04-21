@@ -1,6 +1,6 @@
 .playlist-component {
   & &__songs-nav {
-    padding: 31px 0 26px 0;
+    padding: 31px 0 26px;
     display: flex;
     gap: 32px;
     align-items: center;
@@ -17,10 +17,11 @@
   .icon {
     transition: 0.2s;
   }
-
+  
   .icon:hover {
     cursor: pointer;
     opacity: 0.6;
+    scale: 1.05;
   }
 
   .icon-container:hover {
@@ -65,17 +66,18 @@
       }
     }
 
-    &[data-active="1"]{
-      .playlist-component__song-icons{
+    &[data-active="1"] {
+      .playlist-component__song-icons {
         display: flex;
       }
     }
-    &[data-active="0"]{
-      .playlist-component__song-icons{
+    
+    &[data-active="0"] {
+      .playlist-component__song-icons {
         display: none;
       }
 
-      .playlist-component__showing-list{
+      .playlist-component__showing-list {
         display: none;
       }
     }
