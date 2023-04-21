@@ -53,10 +53,4 @@
       width: 7px;
     }
   }
-
-  @media (max-width: 600px) {
-    & &__showing-list {
-      display: none;
-    }
-  }
 }
