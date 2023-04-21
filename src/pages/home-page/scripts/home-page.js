@@ -75,6 +75,12 @@ function showList(element) {
   }
 }
 
+document.addEventListener("click", (event) => {
+  if(!event.target.closest(".dots")){
+    hideAllList()
+  }
+})
+
 /// ukrywanie list
 ///
 ///
