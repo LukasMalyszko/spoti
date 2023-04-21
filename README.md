@@ -1,5 +1,7 @@
 # INVO Academy JS Starter with Vite
 
+Responsive spotify view clone with drop down list when click on dots
+
 In order to see this file in preview mode in VS Code, press ```Ctrl + Shift + V```
 
 ## Recommended IDE Setup

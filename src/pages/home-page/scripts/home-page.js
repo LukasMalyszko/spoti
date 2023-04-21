@@ -43,7 +43,9 @@ const dots = document.querySelectorAll(".dots");
 ///przechodzi przez pętle dots i rozwija listę do klikniętego dota
 ///
 dots.forEach((dot) => {
-  dot.addEventListener("click", () => {
+  dot.addEventListener("click", (event) => {
+    event.stopPropagation();
+    event.preventDefault();
     showList(dot);
   });
 });
@@ -52,26 +54,15 @@ dots.forEach((dot) => {
 ///
 ///
 function showList(element) {
+  hideAllList();
   const songElement = element.closest(".playlist-component__song-element");
   songElement.dataset.active = "1";
 
   const listContainer = element.parentElement.querySelector(".list-container");
   listContainer.innerHTML = showingList;
 
-  const allSongElements = songElement.parentElement.querySelectorAll(
-    ".playlist-component__song-element"
-  );
-
-  
-  /// ustawia data-active=0 pozostałym songElement
+  /// oblicza pozostałą wysokość strony
   ///
-  allSongElements.forEach((el) => {
-    if (el !== songElement) {
-      el.dataset.active = "0";
-    }
-  });
-
-  // oblicza pozostałą wysokość strony
   const windowHeight = window.innerHeight;
   const elementBottom = songElement.getBoundingClientRect().bottom;
   const windowHeightBelowElement = windowHeight - elementBottom;
@@ -79,46 +70,23 @@ function showList(element) {
 
   /// sprawdza czy lista ma większą wysokość niż pozostała wysokość strony
   ///
-  if (dropdown.offsetHeight > windowHeightBelowElement) {
+  if (elementBottom > windowHeightBelowElement) {
     dropdown.classList.add("reverse");
   }
 }
 
-/// jeśli klikniętym el nie są ikony, zamyka listę
-/// 
+/// ukrywanie list
 ///
-document.addEventListener("click", (event) => {
-  if (!event.target.closest(".dots")) {
-    // if (!event.target.closest(".playlist-component__showing-list")) {
-      hideList();
-    // }
-  }
-});
-
-/// sprawdza czy obiekt event został zdefiniowany
-/// 
 ///
-function hideList(event) {
-  if (event && event.target) {
-    const songElement = event.target.closest(
-      ".playlist-component__song-element"
-    );
+function hideAllList() {
+  const songElements = document.querySelectorAll(
+    ".playlist-component__song-element"
+  );
+  songElements.forEach((songElement) => {
     songElement.dataset.active = "0";
-
-    const container = event.target
-      .closest(".icon-container")
-      .querySelector(".list-container");
-    container.innerHTML = "";
-  } else {
-    const songElements = document.querySelectorAll(
-      ".playlist-component__song-element"
-    );
-    songElements.forEach((songElement) => {
-      songElement.dataset.active = "0";
-      const listContainers = songElement.querySelectorAll(".list-container");
-      listContainers.forEach((listContainer) => {
-        listContainer.innerHTML = "";
-      });
+    const listContainers = songElement.querySelectorAll(".list-container");
+    listContainers.forEach((listContainer) => {
+      listContainer.innerHTML = "";
     });
-  }
+  });
 }
